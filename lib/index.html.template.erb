@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>OSU MBB Stats Dashboard</title>
+  <meta name="description" content="OSU MBB Data HQ">
+  <meta name="author" content="Charlie's Angels">
+
+  <link rel="stylesheet" href="styles.css?v=1.0">
+
+
+</head>
+
+<body>
+  <h1>OSU Men's Basketball Stats Dashboard</h1>
+  <h3>By Team Seven: Kamren Z. Glen Q. Mohamed M. Rith R.</h3>
+  <p class="text-block justified">
+    <b>About Project:</b> The goal of this project was to scrape the
+    OSU MBB Roster page found
+    <a href="https://ohiostatebuckeyes.com/sports/m-baskbl/roster/">
+      here</a>. Some players' personal pages contain a "STATS"
+    tab with their personal statistics. This project scrapes
+    the main roster page, checks which players have a "STATS"
+    tab on their personal page, and scrapes the statistics
+    for each game played.
+    <br/><br/>
+    Data is then compiled into various graphs showing different
+    aggregated statistics. For details on some of the calculations
+    used, please see the About Game Scores section.
+  </p>
+  <p class="text-block">
+    Player Personal Statistics Pages (Data Sources)<br/>
+    (Click images to view sources!)
+  </p>
+  <h3></h3>
+  <table>
+    <tr>
+<%= @player_image_space %>
+    </tr>
+  </table>
+  <p class="text-block justified">
+    <b>About Game Scores:</b> When devising the concept for this
+    project, our group wished for a method to use player
+    statistics to compare performance; we envisioned a ranking
+    system similar to OVR ranking in NBA 2K games. After some
+    searching, we discovered a calculated statistic called
+    "Game Score" conceived by basketball writer/analyst
+    <a href="https://en.wikipedia.org/wiki/John_Hollinger">
+      John Hollinger</a>. The stat is meant to generalize a player's performance
+    in a single game, and was created to be compared on a scale
+    similar to points: 20 is a good score whereas a single
+    digit score represents a less productive game. Details about
+    the calculation of Game Score can be found
+    <a href="https://captaincalculator.com/sports/basketball/game-score-calculator/">
+      here</a>. Our project automatically calculates this statistic after
+    reading the data for each game. This statistic is aggregated
+    across the entire team in various way in the following graphs.
+  </p>
+  <img src="GameScLine.png" alt="" style="width:1200px;height:800px;">
+  <img src="GameScBar.png" alt="" style="width:1200px;height:800px;">
+  <img src="StatsBar.png" alt="" style="width:1200px;height:800px;">
+</body>
+</html>
